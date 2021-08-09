@@ -28,7 +28,7 @@ hianyzo_varos = "Montgomery"
 # Az applikáció által választott várossal való összehasonlítás
 driver.find_element_by_id("missingCity").send_keys(hianyzo_varos)
 driver.find_element_by_id("submit").click()
-assert driver.find_element_by_id("result").text != "Nem találtad el."
+assert driver.find_element_by_id("result").text == "Eltaláltad."
 print(hianyzo_varos, "Ez jó tipp volt")
 
 driver.close()

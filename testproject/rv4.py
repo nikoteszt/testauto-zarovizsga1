@@ -25,6 +25,7 @@ print(rand_cities)
 
 # A két lista összehasonlítása, megkeressük azt amelyik csak az egyikben van jelen.
 exist_city = ""
+k = 0
 for k in range(len(r_cities)):
     exist_city = rand_cities.count(r_cities[k])
     if exist_city == 0:

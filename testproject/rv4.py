@@ -22,7 +22,14 @@ for j in range(len(random_cities)):
     rand_cities.append(random_cities[j].text)
 print(rand_cities)
 
+# ez még csak kód próba
+hianyzo_varos = "Montgomery"
 
+# Az applikáció által választott várossal való összehasonlítás
+driver.find_element_by_id("missingCity").send_keys(hianyzo_varos)
+driver.find_element_by_id("submit").click()
+assert driver.find_element_by_id("result").text != "Nem találtad el."
+print(hianyzo_varos, "Ez jó tipp volt")
 
 driver.close()
 driver.quit()
